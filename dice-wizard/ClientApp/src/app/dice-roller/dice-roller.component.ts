@@ -21,4 +21,15 @@ export class DiceRollerComponent implements OnInit {
     roll.diceRoll = Math.floor(Math.random() * this.numberOfSides) + 1;
     this.homeService.diceRolls.push(roll);
   }
+
+  canRoll(): Boolean{
+    if(this.name === null || this.name === undefined){
+      return false;
+    }
+    let existingName = this.homeService.diceRolls.some(x => x.name.toLocaleLowerCase() === this.name.toLowerCase());
+    if(existingName === true){
+      return false;
+    }
+    return true;
+  }
 }

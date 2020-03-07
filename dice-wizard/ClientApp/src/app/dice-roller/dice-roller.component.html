@@ -16,6 +16,6 @@
         <input [(ngModel)]="name" type="text" class="form-control" placeholder="Enter a name for the leaderboard">
     </div>
     <div class="padding-top-5">
-    <button (click)="rollDice()" [disabled]="name === null || name === undefined" type="button" class="btn btn-primary">Roll</button>
+    <button (click)="rollDice()" [disabled]="!canRoll()" type="button" class="btn btn-primary">Roll</button>
     </div>
 </div>
