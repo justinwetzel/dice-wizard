@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DiceWizard/.vs/DiceWizard/v16
+/DiceWizard/DiceWizard/bin/Debug/netcoreapp3.1
+/DiceWizard/DiceWizard/obj
