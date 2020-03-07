@@ -13,9 +13,9 @@
             <label for="D20">D20</label>
         </div>
     <div class="w400">
-        <input [ngModel]="name" type="text" class="form-control" placeholder="Username">
+        <input [(ngModel)]="name" type="text" class="form-control" placeholder="Enter a name for the leaderboard">
     </div>
     <div class="padding-top-5">
-    <button type="button" class="btn btn-primary">Roll</button>
+    <button (click)="rollDice()" [disabled]="name === null || name === undefined" type="button" class="btn btn-primary">Roll</button>
     </div>
 </div>
