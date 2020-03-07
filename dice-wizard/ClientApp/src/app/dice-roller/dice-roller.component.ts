@@ -17,7 +17,7 @@ export class DiceRollerComponent implements OnInit {
 
   rollDice(): void{
     let roll = new DiceRoll();
-    roll.name = name;
+    roll.name = this.name;
     roll.diceRoll = Math.floor(Math.random() * this.numberOfSides) + 1;
     this.homeService.diceRolls.push(roll);
   }
