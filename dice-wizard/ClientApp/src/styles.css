@@ -14,3 +14,11 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.w400{
+  width: 400px;
+}
+
+.padding-top-5{
+  padding-top: 5px;
+}

@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dice-roller.component.css']
 })
 export class DiceRollerComponent implements OnInit {
-
+  numberOfSides = 20;
+  name: string | null;
   constructor() { }
 
   ngOnInit() {
