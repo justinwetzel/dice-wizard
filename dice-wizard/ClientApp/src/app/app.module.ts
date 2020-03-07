@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { DiceRollerComponent } from './dice-roller/dice-roller.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { HomeService } from './home/home.component.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
     CounterComponent,
     FetchDataComponent,
     DiceRollerComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -33,7 +34,7 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
       { path: 'leaderboard', component: LeaderboardComponent },
     ])
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

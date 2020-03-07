@@ -1,1 +1,9 @@
-<p>leaderboard works!</p>
+<div class="d-flex flex-row justify-content-start card padding-5 bg-light">
+    <div class="col-2">Name</div>
+    <div class="col">Roll</div>
+</div>
+<div *ngFor="let roll of homeService.diceRolls"
+class="d-flex flex-row padding-5 justify-content-start border-bottom">
+    <div class="col-2">{{ roll.name }}</div>
+    <div class="col">{{ roll.diceRoll }}</div>
+</div>
