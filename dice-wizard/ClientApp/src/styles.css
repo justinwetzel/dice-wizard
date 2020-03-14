@@ -1,18 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+html, body {
+  height: 100vh;
+  margin: 0px;
 }
 
-code {
-  color: #e01a76;
+.font-primary {
+  color: #845EC2 !important;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.btn-theme {
+  color: #A8EB12;
+  background-color: #845EC2;
+  border-color: #794CC4;
+}
+
+.btn-theme:hover {
+  color: #FEF9FF;
 }
 
 .w400{
@@ -25,4 +30,24 @@ code {
 
 .padding-5 {
   padding: 5px;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0px;
+}
+
+.padding-right-5 {
+  padding-right: 5px;
+}
+
+.padding-right-40 {
+  padding-right: 40px;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.site-background {
+  background-color: #FEF9FF;
 }

@@ -21,4 +21,8 @@ export class DiceRollerComponent implements OnInit {
     roll.diceRoll = Math.floor(Math.random() * this.numberOfSides) + 1;
     this.homeService.diceRolls.push(roll);
   }
+
+  get canRoll(): boolean {
+    return this.name !== null && this.name !== undefined && this.name !== '';
+  }
 }

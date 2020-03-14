@@ -1,21 +1,35 @@
-<div id=radio_input_for_sides_of_dice>
-    <p>Select the number of sides for the Dice</p>
-        <div class="flex-row d-flex justify-content-between w400" role="group">
-            <input [(ngModel)]="numberOfSides" type="radio" id="D6" name="dice" [value]="6">
-            <label for="D6">D6</label><br>
-            <input [(ngModel)]="numberOfSides" type="radio" id="D8" name="dice" [value]="8">
-            <label for="D8">D8</label><br>
-            <input [(ngModel)]="numberOfSides" type="radio" id="D10" name="dice" [value]="10">
-            <label for="D10">D10</label>
-            <input [(ngModel)]="numberOfSides" type="radio" id="D12" name="dice" [value]="12">
-            <label for="D12">D12</label>
-            <input [(ngModel)]="numberOfSides" type="radio" id="D20" name="dice" [value]="20">
-            <label for="D20">D20</label>
-        </div>
-    <div class="w400">
-        <input [(ngModel)]="name" type="text" class="form-control" placeholder="Enter a name for the leaderboard">
+<div class="row">
+    <div class="col-sm">
     </div>
-    <div class="padding-top-5">
-    <button [routerLink]="['/leaderboard']" (click)="rollDice()" [disabled]="name === null || name === undefined" type="button" class="btn btn-primary">Roll</button>
+    <div class="col-sm font-primary" id=radio_input_for_sides_of_dice>
+        <h5>Select the number of sides for the Dice:</h5>
+            <div class="flex-row d-flex" role="group">
+                <div class="padding-right-40">
+                    <input class="padding-right-5" [(ngModel)]="numberOfSides" type="radio" id="D6" name="dice" [value]="6">
+                    <label for="D6">D6</label><br>
+                </div>
+                <div class="padding-right-40">
+                    <input class="padding-right-5" [(ngModel)]="numberOfSides" type="radio" id="D8" name="dice" [value]="8">
+                    <label for="D8">D8</label><br>
+                </div>
+                <div class="padding-right-40">
+                    <input class="padding-right-5" [(ngModel)]="numberOfSides" type="radio" id="D10" name="dice" [value]="10">
+                    <label for="D10">D10</label>
+                </div>
+                <div class="padding-right-40">
+                    <input class="padding-right-5" [(ngModel)]="numberOfSides" type="radio" id="D12" name="dice" [value]="12">
+                    <label for="D12">D12</label>
+                </div>
+                <div>
+                    <input class="padding-right-5" [(ngModel)]="numberOfSides" type="radio" id="D20" name="dice" [value]="20">
+                    <label for="D20">D20</label>
+                </div>
+            </div>
+        <div class="margin-bottom-5">
+            <input [(ngModel)]="name" type="text" class="form-control" placeholder="Enter a name for the leaderboard">
+        </div>
+        <div class="padding-top-5">
+        <button [routerLink]="['/leaderboard']" (click)="rollDice()" [disabled]="canRoll === false" type="button" class="btn btn-theme">Roll</button>
+        </div>
     </div>
 </div>

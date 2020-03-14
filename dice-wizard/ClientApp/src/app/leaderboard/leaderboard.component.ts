@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DiceRoll } from '../models/dice-roll.model';
 import { HomeService } from '../home/home.component.service';
 
 @Component({
@@ -13,5 +12,4 @@ export class LeaderboardComponent implements OnInit {
   ngOnInit() {
     this.homeService.diceRolls.sort((a, b) => 0 - (a.diceRoll > b.diceRoll ? 1 : -1));
   }
-
 }
