@@ -1,12 +1,20 @@
-<div class="leaderboard-container" [class.leaderboard-box-shadow]="homeService.diceRolls.length > 0">
-    <div class="d-flex flex-row justify-content-start padding-5 grid-header">
-        <div class="col-2">Name</div>
-        <div class="col">Roll</div>
-    </div>
-    <div *ngFor="let roll of homeService.diceRolls; let index = index"
+<div
+  class="leaderboard-container"
+  [class.leaderboard-box-shadow]="homeService.diceRolls.length > 0"
+>
+  <div class="d-flex flex-row justify-content-start padding-5 grid-header">
+    <div class="col-2">Name</div>
+    <div class="col">Roll</div>
+  </div>
+  <div
+    *ngFor="let roll of homeService.diceRolls; let index = index"
     class="d-flex flex-row padding-5 justify-content-start grid-item"
-    [class.grid-item-border]="homeService.diceRolls.length > 1 && index !== homeService.diceRolls.length - 1">
-        <div class="col-2">{{ roll.name }}</div>
-        <div class="col">{{ roll.diceRoll }}</div>
-    </div>
+    [class.grid-item-border]="
+      homeService.diceRolls.length > 1 &&
+      index !== homeService.diceRolls.length - 1
+    "
+  >
+    <div class="col-2">{{ roll.name }}</div>
+    <div class="col">{{ roll.diceRoll }}</div>
+  </div>
 </div>
