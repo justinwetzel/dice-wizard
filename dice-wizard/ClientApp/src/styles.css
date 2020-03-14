@@ -45,8 +45,28 @@ body {
   padding-right: 40px;
 }
 
+.margin-top-5 {
+  margin-top: 5px;
+}
+
 .margin-bottom-5 {
   margin-bottom: 5px;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.margin-right-5 {
+  margin-right: 5px;
+}
+
+.margin-right-40 {
+  margin-right: 40px;
 }
 
 .site-background {
@@ -57,4 +77,50 @@ body {
   font-family: "Orbitron", sans-serif;
   font-weight: normal;
   font-style: normal;
+}
+
+/* First color scheme attempt, going to work on a way to make this dynamic and able to support multiple themes */
+.bg-purple-nav {
+  background-color: #845ec2;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #a8eb12;
+  font-size: 18px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+a.navbar-brand:hover {
+  color: #fef9ff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+a.navbar-brand:focus {
+  color: #a8eb12;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  color: #a8eb12 !important;
+  font-size: 30px;
+}
+
+nav.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.grid-item-border {
+  border-bottom: 1px solid #845ec2;
+}
+
+.grid-header {
+  background-color: #845ec2;
+  color: #a8eb12;
+}
+
+.grid-item {
+  color: #845ec2;
 }

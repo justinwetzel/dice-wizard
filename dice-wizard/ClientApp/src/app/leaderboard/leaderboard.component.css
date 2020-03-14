@@ -1,21 +1,8 @@
-.grid-item-border {
-    border-bottom: 1px solid #B39CD0;
-}
-
-.grid-header {
-  background-color: #845EC2;
-  color: #A8EB12;
-}
-
-.grid-item {
-    color: #845EC2;
-}
-
 .leaderboard-container {
-    border: 1px solid #B39CD0;
-    border-radius: 5px;
+  border: 2px solid #845ec2;
+  border-radius: 5px;
 }
 
 .leaderboard-box-shadow {
-    box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.50);
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.5);
 }

@@ -3,60 +3,60 @@
   <div class="col-sm font-primary" id="radio_input_for_sides_of_dice">
     <h5>Select the number of sides for the Dice:</h5>
     <div class="flex-row d-flex" role="group">
-      <div class="padding-right-40">
+      <div class="margin-right-40">
         <input
-          class="padding-right-5"
+          class="margin-right-5"
           [(ngModel)]="numberOfSides"
           type="radio"
           id="D6"
           name="dice"
           [value]="6"
         />
-        <label for="D6">D6</label><br />
+        <label for="D6">6</label><br />
       </div>
-      <div class="padding-right-40">
+      <div class="margin-right-40">
         <input
-          class="padding-right-5"
+          class="margin-right-5"
           [(ngModel)]="numberOfSides"
           type="radio"
           id="D8"
           name="dice"
           [value]="8"
         />
-        <label for="D8">D8</label><br />
+        <label for="D8">8</label><br />
       </div>
-      <div class="padding-right-40">
+      <div class="margin-right-40">
         <input
-          class="padding-right-5"
+          class="margin-right-5"
           [(ngModel)]="numberOfSides"
           type="radio"
           id="D10"
           name="dice"
           [value]="10"
         />
-        <label for="D10">D10</label>
+        <label for="D10">10</label>
       </div>
-      <div class="padding-right-40">
+      <div class="margin-right-40">
         <input
-          class="padding-right-5"
+          class="margin-right-5"
           [(ngModel)]="numberOfSides"
           type="radio"
           id="D12"
           name="dice"
           [value]="12"
         />
-        <label for="D12">D12</label>
+        <label for="D12">12</label>
       </div>
       <div>
         <input
-          class="padding-right-5"
+          class="margin-right-5"
           [(ngModel)]="numberOfSides"
           type="radio"
           id="D20"
           name="dice"
           [value]="20"
         />
-        <label for="D20">D20</label>
+        <label for="D20">20</label>
       </div>
     </div>
     <div class="margin-bottom-5">
@@ -67,7 +67,7 @@
         placeholder="Enter a name for the leaderboard"
       />
     </div>
-    <div class="padding-top-5">
+    <div class="margin-top-5">
       <button
         [routerLink]="['/leaderboard']"
         (click)="rollDice()"
