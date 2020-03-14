@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { DiceRollerComponent } from './dice-roller/dice-roller.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { HomeService } from './home/home.component.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomeService } from './home/home.component.service';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'leaderboard', component: LeaderboardComponent },
-    ])
+    ]),
+    FontAwesomeModule
   ],
   providers: [HomeService],
   bootstrap: [AppComponent]
