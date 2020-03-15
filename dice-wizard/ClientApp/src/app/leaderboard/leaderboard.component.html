@@ -1,6 +1,25 @@
+<div class="d-flex flex-row justify-content-start margin-bottom-10">
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-theme">
+      <input type="radio" name="options" [ngModel]="leaderboardService.numberOfSides" [value]="6" (change)="setNumberOfSides(6)"> 6
+    </label>
+    <label class="btn  btn-theme">
+      <input type="radio" name="options" [ngModel]="leaderboardService.numberOfSides" [value]="8" (change)="setNumberOfSides(8)"> 8
+    </label>
+    <label class="btn btn-theme">
+      <input type="radio" name="options" [ngModel]="leaderboardService.numberOfSides" [value]="10" (change)="setNumberOfSides(10)"> 10
+    </label>
+    <label class="btn btn-theme">
+      <input type="radio" name="options" [ngModel]="leaderboardService.numberOfSides" [value]="12" (change)="setNumberOfSides(12)"> 12
+    </label>
+    <label class="btn btn-theme">
+      <input type="radio" name="options" [ngModel]="leaderboardService.numberOfSides" [value]="20" (change)="setNumberOfSides(20)"> 20
+    </label>
+  </div>
+</div>
 <div
   class="leaderboard-container"
-  [class.leaderboard-box-shadow]="homeService.diceRolls.length > 0"
+  [class.leaderboard-box-shadow]="leaderboardService.diceRolls.length > 0"
 >
   <div class="d-flex flex-row justify-content-start padding-5 grid-header">
     <div class="col-1"></div>
@@ -8,17 +27,17 @@
     <div class="col">Roll</div>
   </div>
   <div
-    *ngFor="let roll of homeService.diceRolls; let index = index"
+    *ngFor="let roll of leaderboardService.diceRolls; let index = index"
     class="d-flex flex-row padding-5 justify-content-start grid-item"
     [class.grid-item-border]="
-      homeService.diceRolls.length > 1 &&
-      index !== homeService.diceRolls.length - 1
+      leaderboardService.diceRolls.length > 1 &&
+      index !== leaderboardService.diceRolls.length - 1
     "
   >
     <div class="col-1">
       <fa-icon *ngIf="isHighestRoll(roll)" [icon]="faTrophy"></fa-icon>
     </div>
     <div class="col-2">{{ roll.name }}</div>
-    <div class="col">{{ roll.diceRoll }}</div>
+    <div class="col">{{ roll.roll }}</div>
   </div>
 </div>

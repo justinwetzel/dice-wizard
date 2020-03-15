@@ -6,3 +6,8 @@
 .leaderboard-box-shadow {
   box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.5);
 }
+
+.btn-theme.active
+{
+    background-color: #ff8080;
+}

@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { HomeService } from "../home/home.component.service";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { DiceRoll } from "../models/dice-roll.model";
+import { LeaderboardService } from "./leaderboard.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-leaderboard",
@@ -10,21 +11,27 @@ import { DiceRoll } from "../models/dice-roll.model";
 })
 export class LeaderboardComponent implements OnInit {
   faTrophy = faTrophy;
-  constructor(private homeService: HomeService) {}
+  constructor(private leaderboardService: LeaderboardService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.homeService.diceRolls.sort(
-      (a, b) => 0 - (a.diceRoll > b.diceRoll ? 1 : -1)
-    );
+    this.get();
+  }
+
+  get(): void {
+    this.leaderboardService.getLeaderboard();
   }
 
   isHighestRoll(roll: DiceRoll): boolean {
-    let allRolls = this.homeService.diceRolls.map(x => x.diceRoll);
+    let allRolls = this.leaderboardService.diceRolls.map(x => x.roll);
     let maxRoll = Math.max.apply(Math, allRolls);
-    debugger;
-    if (roll.diceRoll === maxRoll) {
+    if (roll.roll === maxRoll) {
       return true;
     }
     return false;
+  }
+
+  setNumberOfSides(sides: number): void {
+    this.leaderboardService.numberOfSides = sides;
+    this.leaderboardService.getLeaderboard();
   }
 }

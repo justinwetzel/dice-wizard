@@ -1,4 +1,6 @@
 export class DiceRoll {
-    diceRoll: number = 0;
-    name: string = '';
+  roll: number = 0;
+  name: string = "";
+  createdDate: Date;
+  numberOfSides: number;
 }

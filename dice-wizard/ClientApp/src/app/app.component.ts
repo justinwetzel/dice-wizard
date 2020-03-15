@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
-import { DiceRoll } from './models/dice-roll.model';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: "app-root",
+  templateUrl: "./app.component.html"
 })
 export class AppComponent {
-  title = 'app';
+  title = "app";
 }
