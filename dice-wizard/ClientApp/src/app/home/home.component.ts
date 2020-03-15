@@ -9,6 +9,6 @@ export class HomeComponent implements OnInit {
   constructor(private leaderboardService: LeaderboardService) {}
 
   ngOnInit() {
-    this.leaderboardService.getLeaderboard(20);
+    this.leaderboardService.getLeaderboard();
   }
 }
