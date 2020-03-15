@@ -11,7 +11,7 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class LeaderboardComponent implements OnInit {
   faTrophy = faTrophy;
-  constructor(private leaderboardService: LeaderboardService, private route: ActivatedRoute) {}
+  constructor(public leaderboardService: LeaderboardService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.get();
