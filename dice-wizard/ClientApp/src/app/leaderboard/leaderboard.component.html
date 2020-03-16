@@ -22,9 +22,9 @@
   [class.leaderboard-box-shadow]="leaderboardService.diceRolls.length > 0"
 >
   <div class="d-flex flex-row justify-content-start padding-5 grid-header">
-    <div class="col-1"></div>
-    <div class="col-2">Name</div>
-    <div class="col">Roll</div>
+    <div class="col-md-1 col-2"></div>
+    <div class="col-md-2 col-5">Name</div>
+    <div class="col-md-9 col-5">Roll</div>
   </div>
   <div
     *ngFor="let roll of leaderboardService.diceRolls; let index = index"
@@ -34,10 +34,10 @@
       index !== leaderboardService.diceRolls.length - 1
     "
   >
-    <div class="col-1">
+    <div class="col-md-1 col-2">
       <fa-icon *ngIf="isHighestRoll(roll)" [icon]="faTrophy"></fa-icon>
     </div>
-    <div class="col-2">{{ roll.name }}</div>
-    <div class="col">{{ roll.roll }}</div>
+    <div class="col-md-2 col-5 break-all">{{ roll.name }}</div>
+    <div class="col-md-9 col-5">{{ roll.roll }}</div>
   </div>
 </div>

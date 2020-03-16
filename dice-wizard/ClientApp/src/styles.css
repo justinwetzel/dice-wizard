@@ -77,6 +77,10 @@ body {
   margin-right: 40px;
 }
 
+.break-all {
+  word-break: break-all;
+}
+
 .site-background {
   background-color: #fef9ff;
 }
