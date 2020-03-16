@@ -77,6 +77,10 @@ body {
   margin-right: 40px;
 }
 
+.margin-left-5 {
+  margin-left: 5px;
+}
+
 .break-all {
   word-break: break-all;
 }
