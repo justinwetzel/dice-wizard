@@ -8,5 +8,6 @@ namespace dice_wizard.Models
         { }
 
         public DbSet<DiceRoll> DiceRoll { get; set; }
+        public DbSet<NumberOfSides> NumberOfSides { get; set; }
     }
 }

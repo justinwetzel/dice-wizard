@@ -1,13 +1,8 @@
 import { Injectable, Inject } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { DiceRoll } from "../models/dice-roll.model";
 import { Observable } from "rxjs";
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    "Content-Type": "application/json"
-  })
-};
 
 @Injectable({
   providedIn: "root"
@@ -18,11 +13,14 @@ export class DiceRollerService {
     this.baseUrl = baseUrl;
   }
 
-  insertDiceRoll(diceRoll: DiceRoll): Observable<void> {
-    return this.http.post<void>(
+  insertDiceRoll(name: string, numberOfSides: number): Observable<void> {
+    let params = new HttpParams().set('numberOfSidesId', numberOfSides.toString())
+    .set('name', name);
+
+    
+    return this.http.get<void>(
       this.baseUrl + "api/diceroll",
-      diceRoll,
-      httpOptions
+      { params: params }
     );
   }
 }

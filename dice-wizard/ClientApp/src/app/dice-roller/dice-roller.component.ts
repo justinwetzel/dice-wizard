@@ -21,17 +21,36 @@ export class DiceRollerComponent implements OnInit {
   ngOnInit() {}
 
   rollDice(): void {
-    let roll = new DiceRoll();
-    roll.name = this.name;
-    roll.roll = Math.floor(Math.random() * this.numberOfSides) + 1;
-    roll.createdDate = new Date();
-    roll.numberOfSides = this.numberOfSides;
-    this.leaderboardService.numberOfSides = this.numberOfSides;
-    this.diceRollerService.insertDiceRoll(roll).subscribe({
+    let sideId = this.getNumberOfSidesId();
+    this.diceRollerService.insertDiceRoll(this.name, sideId).subscribe({
       complete: () => {
         this.router.navigate(['../leaderboard'], { relativeTo: this.activatedRoute });
       }
     });
+  }
+
+  private getNumberOfSidesId(): number {
+    this.leaderboardService.numberOfSides = this.numberOfSides;
+    if(this.numberOfSides == 6)
+    {
+      return 1;
+    }
+    else if(this.numberOfSides == 8)
+    {
+      return 2;
+    }
+    else if(this.numberOfSides == 10)
+    {
+      return 3;
+    }
+    else if(this.numberOfSides == 12)
+    {
+      return 4;
+    }
+    else if(this.numberOfSides == 20)
+    {
+      return 5;
+    }
   }
 
   get canRoll(): Boolean {

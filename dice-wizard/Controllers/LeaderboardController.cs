@@ -14,6 +14,7 @@ namespace dice_wizard.Controllers
     {
         private readonly ILogger<LeaderboardController> _logger;
         private readonly DiceWizardDbContext _dbContext;
+        
 
         public LeaderboardController(ILogger<LeaderboardController> logger, DiceWizardDbContext dbContext)
         {
@@ -25,8 +26,8 @@ namespace dice_wizard.Controllers
         public List<DiceRoll> Get(int numberOfSides)
         {
             var result = _dbContext.DiceRoll
-                .Where(x => x.CreatedDate.Date == DateTime.Now.Date)
                 .Where(x => x.NumberOfSides == numberOfSides)
+                .Where(x => x.CreatedDate.Date == DateTime.UtcNow.Date)
                 .ToList();
 
             return result;

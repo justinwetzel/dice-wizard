@@ -1,4 +1,5 @@
 using dice_wizard.Models;
+using dice_wizard.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +30,7 @@ namespace dice_wizard
                 configuration.RootPath = "ClientApp/dist";
             });
 
+            services.AddScoped<IThreadSafeRandomService, ThreadSafeRandomService>();
             services.AddDbContext<DiceWizardDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
